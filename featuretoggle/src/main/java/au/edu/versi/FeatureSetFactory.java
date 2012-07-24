@@ -18,13 +18,14 @@ public class FeatureSetFactory {
 
     /**
      * Poor man's dependency injection :) A chance to set the Feature Set before it is used.
-     * @param set
      */
     public static void setCurrentFeatureSet(StartupFeatureSet set) {
         currentFeatureSet = set;
     }
 
+    /**
+     * Just to ensure that there will be no instances of the factory floating around
+     */
     private FeatureSetFactory() {
-
     };
 }

@@ -1,7 +1,8 @@
 package au.edu.versi;
 
 /**
- * This is the list of Feature toggles that we support at startup.
+ * This is the list of Feature toggles that we support at startup. 
+ * Presented as an interface so that we can inject different values during testing.
  * @author Martin Paulo
  */
 public interface StartupFeatureSet {

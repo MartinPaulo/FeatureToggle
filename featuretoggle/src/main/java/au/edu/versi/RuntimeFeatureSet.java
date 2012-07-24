@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ * Ordinarily we'd inject an implementation and not use all the static methods.
+ * @author martinpaulo
+ */
 public class RuntimeFeatureSet implements StartupFeatureSet {
 
     private static final String LUXURY_LEVEL = "luxury.level";
@@ -36,6 +40,7 @@ public class RuntimeFeatureSet implements StartupFeatureSet {
         if (null == result) {
             throw new RuntimeException("Could not find " + featureName +" setting ");
         }
+        // we could just dumb this down to be if it starts with "${" then it's a Maven property definition
         if (("${" + featureName +"}").equals(result)) {
             throw new RuntimeException("The "+featureName + " setting has not been defined!");
         }

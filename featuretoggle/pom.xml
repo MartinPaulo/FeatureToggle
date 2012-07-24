@@ -94,6 +94,7 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.5</version>
 				<configuration>
+				    <!-- following stops MacRoman issues on OSX -->
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
@@ -114,6 +115,7 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
+		
 		<pluginManagement>
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
